@@ -45,9 +45,9 @@ public class KhachHangRepo {
 
 
 
-    public KhachHang update(UUID id, KhachHang kh) {
+    public KhachHang update(String ma, KhachHang kh) {
         HttpEntity<KhachHang> entity = new HttpEntity<>(kh);
-        restTemplate.put(getUrl1(id), entity);
+        restTemplate.put(getUrl(ma), entity);
         return kh;
     }
 

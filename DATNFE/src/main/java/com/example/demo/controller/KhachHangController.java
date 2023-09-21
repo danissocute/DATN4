@@ -83,7 +83,7 @@ public class KhachHangController {
 
     //      update Khách Hàng theo mã khách hàng
     @PostMapping("/admin/khachhang/update/{id}")
-    public String update(@PathVariable("id") UUID id,@ModelAttribute("khachhang") KhachHang kh) {
+    public String update(@PathVariable("id") String id,@ModelAttribute("khachhang") KhachHang kh) {
         khachHangRepo.update(id, kh);
         return "redirect:/admin/khachhang/detail/" + id;
     }

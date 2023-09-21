@@ -64,12 +64,12 @@ public class KhachHangConntroller {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<?> update(@RequestBody KhachHang khachHang,@PathVariable("id")  UUID id) {
+    public ResponseEntity<?> update(@RequestBody KhachHang khachHang,@PathVariable("id")  String id) {
         return ResponseEntity.ok(khachHangRepo.save(khachHang));
     }
 
-    @PutMapping("/{ma}")
-    public ResponseEntity<?> update(@RequestBody DiaChi diacchi, @PathVariable("ma")  String ma) {
-        return ResponseEntity.ok(diaChiRepo.save(diacchi));
-    }
+//    @PutMapping("/{ma}")
+//    public ResponseEntity<?> update(@RequestBody DiaChi diacchi, @PathVariable("ma")  String ma) {
+//        return ResponseEntity.ok(diaChiRepo.save(diacchi));
+//    }
 }

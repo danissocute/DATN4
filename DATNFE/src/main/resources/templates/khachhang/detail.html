@@ -147,7 +147,7 @@
 
         <div class="container" style="border: 1px solid black;border-radius: 10px;padding: 20px">
             <center><h1>Chi tiết khách hàng</h1></center>
-            <form th:action="@{|/admin/khachhang/update/${khachhang.id}}" method="post" th:object="${khachhang}">
+            <form th:action="@{|/admin/khachhang/update/${khachhang.ma}}" method="post" th:object="${khachhang}">
                 <div class="row">
                     <input type="text" hidden  th:field="*{id}">
                     <div class="col-md-6">
